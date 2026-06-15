@@ -5,7 +5,7 @@ name: Python application
 
 on:
   push:
-    branches: [ "main"+ ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -44,9 +44,8 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
     - name: Checkout code
-      run: echo "Deploying to production server..."
       uses: actions/checkout@v4
 
     - name: Deploy to production server
       run: echo "Deploying to production server..."
-      
+
